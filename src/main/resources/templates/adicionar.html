@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Jogador</title>
+</head>
+<body>
+
+     <h1>Novo Jogador</h1>
+
+     <form th:object="${jogador}" th:action="@{/salvar_jogador}" method="post">
+         <label for="nome">Nome</label>
+         <input th:field="*{nome}" id="nome" type="text">
+
+         <label for="jogoFavorito">Jogo Favorito</label>
+         <input th:field="*{jogoFavorito}" id="jogoFavorito" type="text">
+
+         <label for="pontos">Pontos</label>
+         <input th:field="*{pontos}" id="pontos" type="text">
+
+         <label for="nick">Nick</label>
+         <input th:field="*{nick}" id="nick" type="text">
+
+         <input type="submit" value="Cadastrar">
+     </form>
+
+</body>
+</html>
